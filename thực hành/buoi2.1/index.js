@@ -15,7 +15,7 @@ app.get("/customers/:id", (req, res) => {
   const { id } = req.params;
   const customerId = customers.find((customer) => customer.id === id);
   if (!customerId) {
-    res.send({
+    return res.send({
       data: null,
       message: "không có khách hàng",
     });
@@ -107,12 +107,30 @@ app.post("/customers", (req, res) => {
   });
 });
 app.post("/orders", (req, res) => {
-  const id = crypto.randomUUID();
   const { orderId, customerId, productId, quantity } = req.body;
   const productlist = products;
   const product = productlist.find((item) => {
     return item.id === productId;
   });
+  const validcustomer = customers.find(customer => customer.id.includes(customerId))
+  if (!validcustomer) {
+    return res.send({
+      data: null,
+      message: "người sử dụng không tồn tại"
+    })
+  }
+  if (!Number.isFinite(Number(quantity)) || Number(quantity) < 1) {
+    return res.send({
+      data:null,
+      message: "số lượng không hợp lệ"
+    })
+  }
+  if (!orderId) {
+    return res.send({
+      data: null,
+      message: "id là bắt buộc"
+    })
+  }
   if (!product) {
     res.send({
       data: null,
