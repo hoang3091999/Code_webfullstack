@@ -1,0 +1,14 @@
+server là nơi cung cấp 1 cái chương trình, để xử lý các yêu cầu dữ liệu từ phía client
+Những ứng dụng muốn sử dụng dịch vụ mà Server cửa mình cung cấp thì đều là client
+
+Máy tính để chứa chương trình gọi là máy chủ
+
+Tập hợp các giao thức và tiêu chuẩn
+
+giao thức - là để chi các client kết nói tới
+
+giao thức HTTP - sinh ra để chương trình sử dungjm cung cấp và cho phép các client kết nối tới
+và phải có HTTP thì mới thành 1 cái server ở phía trên internet được
+
+
+

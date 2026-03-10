@@ -1,0 +1,27 @@
+Chuẩn API - RESTful API - cần cài đặt postman
+- GET
+- POST
+- PUT
+- DELETE
+
+đối với express -> sinh ra là để cho RESTful API
+
+1. Viết api lấy danh sách customer
+với cách thức get - có tổng cộng 3 loại get
++ lấy toàn bộ danh sách
++ lấy toàn bộ nhưng có điều kiện
+
++ lấy 1 dữ liệu (chi tiết)
+
+2. API tạo mới customer - thêm mới - POST
+- phỉa biết dữ liệu đc gửi lên ntn
+- cách server nhân dữ liệu đó ntnt
+
+3. API cập nhật dữ liệu - thường chỉ là cập nhật 1 - PUT (PATCH)
+- PUT - là cập nhật toàn phần - replace
+- PATCH - cập nhậ 1 trương thông tin dữ liệu nhỏ - KHÔNG DÙNG
+
++ Tìm kiếm được dữ liệu cần cập nhật -> dùng dạng params (tìm kiếm 1 dữ liệu theo id)
++ Lấy được dữ liệu cập nhật trên body
+
+4.
