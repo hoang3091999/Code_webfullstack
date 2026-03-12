@@ -1,0 +1,12 @@
+kiến thức liên quan bất đồng bộ
+lý do có bất đồng bộ
+
+-bản chất HS là ngôn ngữ đơn luồng (single thread)
+-ứng dụng luôn có những chức năng phải có thời gian thực thi -> nếu gặp 1 đoạn code chưa thực hiện xong -> chương trình ko chay đc
+=> phải thực hiện tuần tự, phải lần xong công việc 1-2-3-4 cho đến hết chuwong trình
+
+-những chức năng mất thời gian cụ thể là phải đợi: Ktra thông tin đăng nhập
+Lấy dữ liệu từ database, goi API từ bên thứ 3, Đọc/ghi file
+
+->bất đồng bộ sinh ra để giải quyết vấn đề đợi:
+-JSON server tọa ra 1 server với RESTful API - lưu trữ được dữ liệu với file JSON
