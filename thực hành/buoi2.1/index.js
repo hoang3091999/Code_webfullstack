@@ -112,7 +112,7 @@ app.post("/orders", (req, res) => {
   const product = productlist.find((item) => {
     return item.id === productId;
   });
-  const validcustomer = customers.find(customer => customer.id.includes(customerId))
+  const validcustomer = customers.find(customer => customer.id === customerId)
   if (!validcustomer) {
     return res.send({
       data: null,
