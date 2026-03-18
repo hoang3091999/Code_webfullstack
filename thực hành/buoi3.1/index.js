@@ -70,7 +70,24 @@ app.get("/customers/:customerid/orders", async (req, res) => {
     res.status(505).send(error.message);
   }
 });
-
+app.get("/orders/highvalue", async (req, res) => {
+  try {
+    const orders = await axios.get(`${JSON_SERVER_URL}/orders`);
+    const filteorders = orders.data.filter(
+      (order) => order.totalPrice > 10000000,
+    );
+    if (filteorders.length === 0) {
+      return res.send("không có đơn hàng trên 10 triệu");
+    }
+    const result = {
+      message: "danh sách đơn hàng trên 10 triệu",
+      data: filteorders,
+    };
+    res.send(result);
+  } catch (error) {
+    res.status(505).send(error.message);
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
