@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.3.1"
+  },
+  "name": "buoi6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
